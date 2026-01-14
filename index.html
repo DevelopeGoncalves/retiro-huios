@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro Huios | Identidade & Propósito</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        huios: {
+                            dark: '#0f172a',  /* Slate 900 */
+                            primary: '#1e293b', /* Slate 800 */
+                            accent: '#f59e0b', /* Amber 500 */
+                            light: '#f8fafc', /* Slate 50 */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Estilos personalizados para detalhes finos */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-huios-light text-huios-primary antialiased">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-effect bg-huios-dark/90 text-white py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black tracking-tighter text-huios-accent">HUIOS<span class="text-white">.26</span></a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wide">
+                <a href="#sobre" class="hover:text-huios-accent transition">O Retiro</a>
+                <a href="#cronograma" class="hover:text-huios-accent transition">Data</a>
+                <a href="#inscricao" class="px-4 py-2 border border-huios-accent text-huios-accent rounded-full hover:bg-huios-accent hover:text-white transition">Inscreva-se</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-screen flex items-center justify-center text-center hero-bg text-white px-4">
+        <div class="max-w-4xl mx-auto space-y-6 animate-fade-in-up">
+            <span class="inline-block py-1 px-3 rounded-full bg-huios-accent/20 border border-huios-accent text-huios-accent text-xs font-bold uppercase tracking-widest mb-2">
+                21 a 24 de Agosto
+            </span>
+            <h1 class="text-5xl md:text-7xl font-black leading-tight">
+                Descubra sua <span class="text-transparent bg-clip-text bg-gradient-to-r from-huios-accent to-yellow-200">Verdadeira Identidade</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+                Não é apenas um evento. É o momento de transição. Deixe de ser apenas criança e assuma seu lugar como filho maduro.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center pt-8">
+                <a href="#inscricao" class="bg-huios-accent text-huios-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition shadow-lg shadow-huios-accent/20 flex items-center justify-center gap-2">
+                    Garantir minha vaga <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="cronograma" class="py-12 bg-huios-dark text-white border-b border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-huios-accent font-bold uppercase tracking-widest mb-8 text-sm">A contagem começou</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto" id="countdown">
+                </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1510590337019-5ef2d3977e2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jovens reunidos" class="rounded-2xl shadow-2xl">
+                </div>
+                <div class="md:w-1/2 space-y-6">
+                    <h2 class="text-4xl font-bold text-huios-dark">Do que se trata?</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        O Retiro Huios é focado no despertamento espiritual e na construção de relacionamentos profundos. "Huios" é a palavra grega para "filho maduro" — aquele que já está pronto para receber a herança.
+                    </p>
+                    <ul class="space-y-4 pt-4">
+                        <li class="flex items-center gap-3">
+                            <div class="bg-huios-accent/10 p-2 rounded-lg text-huios-accent"><i data-lucide="flame"></i></div>
+                            <span class="font-semibold text-gray-800">Worship Intenso</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="bg-huios-accent/10 p-2 rounded-lg text-huios-accent"><i data-lucide="book-open"></i></div>
+                            <span class="font-semibold text-gray-800">Palavra Profunda</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="bg-huios-accent/10 p-2 rounded-lg text-huios-accent"><i data-lucide="users"></i></div>
+                            <span class="font-semibold text-gray-800">Comunhão Real</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-huios-light">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-huios-dark mb-4">Escolha seu Lote</h2>
+            <p class="text-gray-500 mb-12">As vagas são limitadas. O preço será confirmado no checkout.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="relative bg-white rounded-2xl p-8 shadow-xl border-2 border-huios-accent transform hover:-translate-y-2 transition duration-300">
+                    <div class="absolute top-0 right-0 bg-huios-accent text-huios-dark text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg uppercase">
+                        Mais Vendido
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-500 uppercase tracking-wide mb-2">Lote Early Bird</h3>
+                    <div class="text-5xl font-black text-huios-dark mb-2">R$ 150<span class="text-lg text-gray-400 font-normal">/pessoa</span></div>
+                    <p class="text-sm text-red-500 font-bold mb-6 flex items-center justify-center gap-1"><i data-lucide="alert-circle" class="w-4 h-4"></i> Primeiras 30 vagas</p>
+                    
+                    <ul class="text-left space-y-3 mb-8 text-gray-600">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="text-green-500 w-5 h-5"></i> Acesso completo aos 4 dias</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="text-green-500 w-5 h-5"></i> Alimentação inclusa</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="text-green-500 w-5 h-5"></i> Kit exclusivo Huios</li>
+                    </ul>
+                    <a href="#inscricao" onclick="selectLote('early')" class="block w-full py-3 bg-huios-accent text-huios-dark font-bold rounded-lg hover:bg-yellow-400 transition cursor-pointer">Quero este</a>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 transform hover:-translate-y-2 transition duration-300">
+                    <h3 class="text-xl font-bold text-gray-500 uppercase tracking-wide mb-2">Lote Regular</h3>
+                    <div class="text-5xl font-black text-huios-dark mb-2">R$ 200<span class="text-lg text-gray-400 font-normal">/pessoa</span></div>
+                    <p class="text-sm text-gray-400 mb-6">Enquanto durarem as vagas</p>
+                    
+                    <ul class="text-left space-y-3 mb-8 text-gray-600">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="text-green-500 w-5 h-5"></i> Acesso completo aos 4 dias</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="text-green-500 w-5 h-5"></i> Alimentação inclusa</li>
+                        <li class="flex items-center gap-2 text-gray-300"><i data-lucide="x" class="w-5 h-5"></i> Kit exclusivo Huios</li>
+                    </ul>
+                    <a href="#inscricao" onclick="selectLote('regular')" class="block w-full py-3 bg-gray-100 text-gray-700 font-bold rounded-lg hover:bg-gray-200 transition cursor-pointer">Selecionar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="inscricao" class="py-20 bg-huios-dark relative overflow-hidden">
+        <div class="absolute -right-20 top-20 w-96 h-96 bg-huios-accent/10 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-12">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-huios-dark">Garanta seu lugar</h2>
+                    <p class="text-gray-500 mt-2">Preencha o formulário abaixo para ir ao pagamento.</p>
+                </div>
+
+                <form id="registrationForm" class="space-y-6">
+                    <input type="hidden" id="lote_visual" name="lote" value="regular">
+
+                    <div>
+                        <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i data-lucide="user" class="text-gray-400 w-5 h-5"></i>
+                            </div>
+                            <input type="text" id="nome" required class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-huios-accent focus:border-huios-accent" placeholder="Seu nome aqui">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="whatsapp" class="block text-sm font-medium text-gray-700 mb-1">WhatsApp</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i data-lucide="phone" class="text-gray-400 w-5 h-5"></i>
+                                </div>
+                                <input type="tel" id="whatsapp" required class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-huios-accent focus:border-huios-accent" placeholder="(00) 00000-0000">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="nascimento" class="block text-sm font-medium text-gray-700 mb-1">Data de Nascimento</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i data-lucide="calendar" class="text-gray-400 w-5 h-5"></i>
+                                </div>
+                                <input type="date" id="nascimento" required class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-huios-accent focus:border-huios-accent">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i data-lucide="mail" class="text-gray-400 w-5 h-5"></i>
+                            </div>
+                            <input type="email" id="email" required class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-huios-accent focus:border-huios-accent" placeholder="seu@email.com">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="igreja" class="block text-sm font-medium text-gray-700 mb-1">Igreja / Congregação</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i data-lucide="home" class="text-gray-400 w-5 h-5"></i>
+                            </div>
+                            <input type="text" id="igreja" required class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-huios-accent focus:border-huios-accent" placeholder="Qual igreja você frequenta?">
+                        </div>
+                    </div>
+
+                    <button type="submit" id="btnSubmit" class="w-full bg-huios-dark text-white font-bold py-4 rounded-lg hover:bg-gray-800 transition transform hover:scale-[1.01] shadow-lg flex justify-center items-center gap-2">
+                        <span>Ir para Pagamento</span> <i data-lucide="chevron-right"></i>
+                    </button>
+                    <p class="text-center text-xs text-gray-400 mt-2">Ambiente seguro. Seus dados estão protegidos.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl font-bold text-huios-dark text-center mb-10">Dúvidas Frequentes</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-gray-50 p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-medium text-gray-800 list-none">
+                        <span>O que devo levar na mala?</span>
+                        <span class="transition group-open:rotate-180"><i data-lucide="chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 text-sm">Roupas de cama (lençol, travesseiro, cobertor), itens de higiene pessoal, toalha, roupas confortáveis, Bíblia e caderno para anotações.</p>
+                </details>
+
+                <details class="group bg-gray-50 p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-medium text-gray-800 list-none">
+                        <span>Como funciona o transporte?</span>
+                        <span class="transition group-open:rotate-180"><i data-lucide="chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 text-sm">Haverá um ônibus saindo da igreja central às 19h do dia 21. O custo do transporte já está incluso no valor da inscrição.</p>
+                </details>
+
+                <details class="group bg-gray-50 p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-medium text-gray-800 list-none">
+                        <span>Posso parcelar o valor?</span>
+                        <span class="transition group-open:rotate-180"><i data-lucide="chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-3 text-sm">Sim! O link de pagamento do Mercado Pago aceita cartão de crédito, Pix e boleto.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-huios-dark text-gray-400 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-black text-white tracking-tighter mb-4">HUIOS<span class="text-huios-accent">.26</span></h2>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="#" class="hover:text-huios-accent transition"><i data-lucide="instagram"></i></a>
+                <a href="#" class="hover:text-huios-accent transition"><i data-lucide="facebook"></i></a>
+                <a href="#" class="hover:text-huios-accent transition"><i data-lucide="youtube"></i></a>
+            </div>
+            <p class="text-sm">
+                &copy; 2026 Ministério de Jovens Huios. Todos os direitos reservados.<br>
+                Desenvolvido para transformar gerações.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // CONFIGURAÇÃO DA API
+        // Em produção, mude para a URL do seu servidor real (ex: https://api.huios.com)
+        const API_URL = "http://localhost:8000";
+
+        // Inicializar ícones Lucide
+        lucide.createIcons();
+
+        // 1. Lógica Visual de Seleção de Lote
+        function selectLote(type) {
+            const input = document.getElementById('lote_visual');
+            input.value = type;
+            
+            // Feedback visual: piscar o formulário
+            const formContainer = document.querySelector('#inscricao .bg-white');
+            formContainer.classList.add('ring-2', 'ring-huios-accent');
+            setTimeout(() => formContainer.classList.remove('ring-2', 'ring-huios-accent'), 500);
+        }
+
+        // 2. Máscara de Telefone (WhatsApp)
+        const phoneInput = document.getElementById('whatsapp');
+        phoneInput.addEventListener('input', function (e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+        });
+
+        // 3. Integração com Backend Python (FETCH API)
+        const form = document.getElementById('registrationForm');
+        const submitBtn = document.getElementById('btnSubmit');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // UI: Estado de Carregamento
+            const originalBtnContent = submitBtn.innerHTML;
+            submitBtn.innerHTML = `<span>Processando...</span> <i data-lucide="loader" class="animate-spin w-5 h-5"></i>`;
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            lucide.createIcons(); // Recarregar ícone novo inserido
+
+            // Captura dos dados
+            const formData = {
+                nome: document.getElementById('nome').value,
+                whatsapp: document.getElementById('whatsapp').value,
+                nascimento: document.getElementById('nascimento').value,
+                email: document.getElementById('email').value,
+                igreja: document.getElementById('igreja').value
+            };
+
+            // Validação simples frontend
+            if(formData.whatsapp.length < 14) {
+                alert("Por favor, digite um número de WhatsApp válido.");
+                resetButton(originalBtnContent);
+                return;
+            }
+
+            try {
+                // Envio para o backend
+                const response = await fetch(`${API_URL}/create_payment`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.detail || 'Erro ao processar inscrição');
+                }
+
+                const data = await response.json();
+                
+                // SUCESSO: Redirecionar para o Checkout do Mercado Pago
+                if(data.init_point) {
+                    window.location.href = data.init_point;
+                } else {
+                    throw new Error("Link de pagamento não gerado.");
+                }
+
+            } catch (error) {
+                console.error(error);
+                alert("Ocorreu um erro: " + error.message);
+                resetButton(originalBtnContent);
+            }
+        });
+
+        function resetButton(content) {
+            submitBtn.innerHTML = content;
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+            lucide.createIcons();
+        }
+
+        // 4. Contagem Regressiva
+        const eventDate = new Date("August 21, 2026 19:00:00").getTime();
+
+        const countdownFunction = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const template = (val, label) => `
+                <div class="bg-huios-primary/50 backdrop-blur-sm p-4 rounded-lg border border-gray-700">
+                    <div class="text-3xl md:text-5xl font-bold font-mono">${val < 10 ? '0'+val : val}</div>
+                    <div class="text-xs uppercase text-gray-400 mt-1">${label}</div>
+                </div>
+            `;
+
+            const countdownElement = document.getElementById("countdown");
+            if (countdownElement) {
+                countdownElement.innerHTML = 
+                    template(days, "Dias") + 
+                    template(hours, "Horas") + 
+                    template(minutes, "Min") + 
+                    template(seconds, "Seg");
+
+                if (distance < 0) {
+                    clearInterval(countdownFunction);
+                    countdownElement.innerHTML = "<div class='col-span-4 text-2xl font-bold text-huios-accent'>O RETIRO COMEÇOU!</div>";
+                }
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
